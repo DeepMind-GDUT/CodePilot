@@ -19,5 +19,14 @@ export default function CommunityFeed() {
     });
   }, []);
 
-  
+  return (
+    <div className="space-y-4">
+      {posts.map(p => (
+        <div key={p.id} className="p-4 border rounded">
+          <h3 className="text-lg font-semibold">{p.title}</h3>
+          <p className="text-sm text-gray-600">by {p.author}</p>
+        </div>
+      ))}
+    </div>
+  );
 }
