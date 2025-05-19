@@ -1,6 +1,7 @@
 package com.deepmind.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -16,6 +17,12 @@ public class CommunityController {
 
     @GetMapping("/getPage")
     public List<String> getPage(){
+        return new ArrayList<>();
+    }
+
+
+    @PostMapping("/postPage")
+    public List<String> publishPage(){
         return new ArrayList<>();
     }
 }
