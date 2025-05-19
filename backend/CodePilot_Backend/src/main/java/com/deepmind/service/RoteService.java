@@ -1,4 +1,4 @@
 package com.deepmind.service;
 
-public class RoteService {
+public interface RoteService {
 }
