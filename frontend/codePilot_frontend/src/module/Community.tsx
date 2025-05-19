@@ -25,6 +25,8 @@ export default function CommunityFeed() {
         <div key={p.id} className="p-4 border rounded">
           <h3 className="text-lg font-semibold">{p.title}</h3>
           <p className="text-sm text-gray-600">by {p.author}</p>
+          <p className="mt-2">{p.content}</p>
+          <div className="mt-2 text-sm">👍 {p.likes}</div>
         </div>
       ))}
     </div>
