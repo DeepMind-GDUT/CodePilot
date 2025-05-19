@@ -14,4 +14,18 @@ export default function TagCloud() {
   useEffect(() => {
     axios.get('/api/community/tags').then(res => setTags(res.data));
   }, []);
+
+  return (
+    <div className="flex flex-wrap gap-2">
+      {tags.map(tag => (
+        <span
+          key={tag.name}
+          style={{ fontSize: `${Math.max(12, tag.weight * 8)}px` }}
+          className="bg-gray-100 px-2 py-1 rounded"
+        >
+          {tag.name}
+        </span>
+      ))}
+    </div>
+  );
 }
