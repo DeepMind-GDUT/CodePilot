@@ -12,4 +12,11 @@ export default function CodeEditor() {
     extensions: [javascript()],
     initialDoc: `function hello() {\n  console.log("Hello, CodePilot!");\n}`,
   });
+
+  const handleSubmit = async () => {
+    const code = editorRef.current?.view.state.doc.toString();
+    const resp = await axios.post('/api/code-review/submit', { code });
+    // 这里假设后台立即返回 AI 反馈任务 ID
+    alert(`提交成功，任务 ID：${resp.data.taskId}`);
+  };
 }
