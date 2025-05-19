@@ -13,4 +13,9 @@ public class CommunityController {
     public List<String> CommunityInit(){
         return new ArrayList<>();
     }
+
+    @GetMapping("/getPage")
+    public List<String> getPage(){
+        return new ArrayList<>();
+    }
 }
